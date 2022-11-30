@@ -7,7 +7,6 @@ public class javaTrain {
         System.out.println("Hält der Zug in Spandau?");
         char spandau = tex.next().charAt(0);
         
-
         if (spandau == 'j'){
             fahrzeit = fahrzeit + 2;
         }
@@ -52,14 +51,10 @@ public class javaTrain {
                 System.out.println("Sie kommen nach "+fahrzeit+" Minuten in Hannover an.");
                 tex.close();
                 return;
-
             }
         }
         tex.close();
-        }
-        
-
-
+        }      
     }
     public static void main(String[]args){
         javaTrain.train();
