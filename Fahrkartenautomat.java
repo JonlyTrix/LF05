@@ -1,4 +1,5 @@
-import java.util.Scanner;
+
+import java.util.*;
 
 class Fahrkartenautomat {
     public static void main(String[] args) {
@@ -11,6 +12,7 @@ class Fahrkartenautomat {
         double rueckgabebetrag;
         double nochZuZahlen;
         int ticketAnzahl;
+        List<Double> geld = Arrays.asList(0.01, 0.02 , 0.05, 0.1, 0.2 , 0.5, 1.0, 2.0 ,5.0 ,10.0 ,20.0);
 
         // // 1 : Geldbetrag eingeben
         // System.out.print("Zu zahlender Betrag (Euro): ");
@@ -25,7 +27,7 @@ class Fahrkartenautomat {
         ticketAnzahl = tastatur.nextInt();
 
         // 4.4 validiere die Anzahl der Tickets
-        if (1 <= ticketAnzahl && ticketAnzahl <= 10) {
+        if (10 < ticketAnzahl || ticketAnzahl < 1) {
             System.out.print("Fehlerhafte Eingabe - Ticketanzahl wird auf 1 gesetzt");
             ticketAnzahl = 1;
         }
@@ -38,9 +40,14 @@ class Fahrkartenautomat {
         while (eingezahlterGesamtbetrag < zuZahlenderBetrag) {
             nochZuZahlen = zuZahlenderBetrag - eingezahlterGesamtbetrag;
             System.out.printf("Noch zu zahlen: %.2f Euro\n", nochZuZahlen);
-            System.out.print("Eingabe (mind. 5 Cent, höchstens 2 Euro): ");
+            System.out.print("Eingabe (mind. 5 Cent, höchstens 20 Euro): ");
             eingeworfeneMuenze = tastatur.nextDouble();
-            eingezahlterGesamtbetrag += eingeworfeneMuenze;
+            if(geld.contains(eingeworfeneMuenze)){
+                eingezahlterGesamtbetrag += eingeworfeneMuenze;
+            }
+            else{
+                System.out.println("Es werden nur 0.01, 0.02, 0.05, 0.10, 0.20, 0.50, 1, 2, 5, 10, 20 akzeptiert!");
+            }
         }
 
         // 3 : Fahrscheinausgabe
