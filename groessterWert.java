@@ -31,5 +31,6 @@ public class groessterWert {
          }
       }
      System.out.println("Der größte eingegebene Wert ist: " + max);
+     Tastatur.close();
    }
 }
