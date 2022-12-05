@@ -32,7 +32,6 @@ public class Haendler {
         Scanner myScanner = new Scanner(System.in);
         System.out.println(text);
         double preis = myScanner.nextDouble();
-        myScanner.close();
         return preis;
     }
     public static String liesString(String text)
@@ -40,7 +39,7 @@ public class Haendler {
         Scanner myScanner = new Scanner(System.in);
         System.out.println(text);
         String preis = myScanner.next();
-        myScanner.close();
+
         return preis;
     }
     public static int liesInt(String text)
@@ -48,7 +47,7 @@ public class Haendler {
         Scanner myScanner = new Scanner(System.in);
         System.out.println(text);
         int preis = myScanner.nextInt();
-        myScanner.close();
+
         return preis;
     }
 
