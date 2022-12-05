@@ -2,6 +2,10 @@ import java.util.Scanner;
 
 public class primeNumbers {
     public static void main(String[] args) {
+        while(true){
+
+
+        
         int x;
         Scanner tastatur = new Scanner(System.in);
         System.out.print("Zahl:");
@@ -9,11 +13,11 @@ public class primeNumbers {
         for(int i=1; i<=x; i=i+1) {
             
             if(x%i==0 && i!=x&&i!=1){
-                System.out.print("keine Primzahl... Teilbar durch: " + i);
+                System.out.println("keine Primzahl... Teilbar durch: " + i);
                 break;
             }
             else if(i/x==1){
-                System.out.print("ist ne Primzahl");
+                System.out.println("ist ne Primzahl");
                 break;
                 
             }
@@ -23,4 +27,5 @@ public class primeNumbers {
       }
     }
     
+}
 }
