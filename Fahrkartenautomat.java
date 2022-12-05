@@ -5,7 +5,7 @@ class Fahrkartenautomat {
     public static void main(String[] args) {
 
         Scanner tastatur = new Scanner(System.in);
-
+        int ticketwahl;
         double zuZahlenderBetrag;
         double eingezahlterGesamtbetrag;
         double eingeworfeneMuenze;
@@ -13,14 +13,40 @@ class Fahrkartenautomat {
         double nochZuZahlen;
         int ticketAnzahl;
         List<Double> geld = Arrays.asList(0.01, 0.02 , 0.05, 0.1, 0.2 , 0.5, 1.0, 2.0 ,5.0 ,10.0 ,20.0);
+        zuZahlenderBetrag = 0.0;
 
         // // 1 : Geldbetrag eingeben
         // System.out.print("Zu zahlender Betrag (Euro): ");
         // zuZahlenderBetrag = tastatur.nextDouble();
-
+        System.out.println("Wählen sie die gewünschte Fahrkarte!");
+        System.out.println("Kurzstrecke (1) 2,00 Euro");
+        System.out.println("Tageskarte VBB-Gesamtnetz (2) 23,00 Euro");
+        System.out.println("Einzelfahrschein AB (3) 3,00 Euro");
+        System.out.println("Einzelfahrschein BC (4) 3,50 Euro");
+        System.out.println("Einzelfahrschein ABC (5) 3,80 Euro");
         // 1.1 : Ticketpreis eingeben
-        System.out.print("Ticketpreis (Euro): ");
-        zuZahlenderBetrag = tastatur.nextDouble();
+        System.out.print("Ticketwahl: ");
+        ticketwahl = tastatur.nextInt();
+        switch(ticketwahl)
+        {
+            case 1:
+            zuZahlenderBetrag = 2.00;
+            break;    
+            case 2:
+            zuZahlenderBetrag = 23.00;
+            break;          
+            case 3:
+            zuZahlenderBetrag = 3.00;
+            break;
+            case 4:
+            zuZahlenderBetrag = 3.50;
+            break;
+            case 5:
+            zuZahlenderBetrag = 3.80;
+            break;
+            default:
+            System.out.print("Fehler!!")         
+        }
 
         // 1.2 : Anzahl der Tickets eingeben
         System.out.print("Anzahl der Tickets: ");
@@ -28,8 +54,12 @@ class Fahrkartenautomat {
 
         // 4.4 validiere die Anzahl der Tickets
         if (10 < ticketAnzahl || ticketAnzahl < 1) {
-            System.out.print("Fehlerhafte Eingabe - Ticketanzahl wird auf 1 gesetzt");
-            ticketAnzahl = 1;
+            while(10 < ticketAnzahl || ticketAnzahl < 1){
+                System.out.println("Ticketanzahl ist nicht gültig! ");
+                System.out.print("Anzahl der Tickets: ");
+                ticketAnzahl = tastatur.nextInt();
+
+            }
         }
 
         zuZahlenderBetrag *= ticketAnzahl;
