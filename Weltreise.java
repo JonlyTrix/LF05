@@ -20,7 +20,7 @@ public class Weltreise {
             Schweiz(a);
             Daenemark(a);
         }
-        System.out.print("Geh nach hause!");
+        System.out.print("Geh nach Hause!!");
 
 
         
