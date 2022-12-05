@@ -47,7 +47,7 @@ public class Haendler {
         Scanner myScanner = new Scanner(System.in);
         System.out.println(text);
         int preis = myScanner.nextInt();
-
+        
         return preis;
     }
 
