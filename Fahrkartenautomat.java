@@ -14,6 +14,7 @@ class Fahrkartenautomat {
         int ticketAnzahl;
         List<Double> geld = Arrays.asList(0.01, 0.02 , 0.05, 0.1, 0.2 , 0.5, 1.0, 2.0 ,5.0 ,10.0 ,20.0);
         zuZahlenderBetrag = 0.0;
+        begruessung();
 
         // // 1 : Geldbetrag eingeben
         // System.out.print("Zu zahlender Betrag (Euro): ");
@@ -45,7 +46,7 @@ class Fahrkartenautomat {
             zuZahlenderBetrag = 3.80;
             break;
             default:
-            System.out.print("Fehler!!")         
+            System.out.print("Fehler!!");         
         }
 
         // 1.2 : Anzahl der Tickets eingeben
@@ -136,5 +137,9 @@ class Fahrkartenautomat {
 
     private static double roundEuro(double x) {
         return Math.round(x * 100) / 100.0d;
+    }
+    public static void begruessung(){
+        System.out.println("Herzilich Wilkommen!");
+        System.out.println("");
     }
 }
