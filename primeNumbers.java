@@ -2,12 +2,13 @@ import java.util.Scanner;
 
 public class primeNumbers {
     public static void main(String[] args) {
+        Scanner tastatur = new Scanner(System.in);
         while(true){
 
 
         
         int x;
-        Scanner tastatur = new Scanner(System.in);
+        
         System.out.print("Zahl:");
         x = tastatur.nextInt();
         for(int i=1; i<=x; i=i+1) {
@@ -21,11 +22,8 @@ public class primeNumbers {
                 break;
                 
             }
-
-            
-
-      }
+        }
     }
     
-}
+}   
 }
