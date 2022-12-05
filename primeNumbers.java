@@ -13,7 +13,7 @@ public class primeNumbers {
         x = tastatur.nextInt();
         for(int i=1; i<=x; i=i+1) {
             
-            if(x%i==0 && i!=x&&i!=1){
+            if(x%i==0 && i!=x&&i!=1 || x == 1){
                 System.out.println("keine Primzahl... Teilbar durch: " + i);
                 break;
             }
