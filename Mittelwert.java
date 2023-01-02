@@ -3,7 +3,7 @@ public class Mittelwert {
     public static void main(String[] args) {
  
        // (E) "Eingabe"
-       // Werte fÃ¼r x und y festlegen:
+       // Werte für x und y festlegen:
        // ===========================
        double x = 8.0;
        double y = 4.0;

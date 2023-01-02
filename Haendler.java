@@ -19,8 +19,7 @@ public class Haendler {
     }
     public static double berechneGesamtbruttopreis(double gesamt, double mwst){
         double bruttogesamtpreis = gesamt * (1 + mwst / 100);
-        return bruttogesamtpreis;
-        
+        return bruttogesamtpreis; 
     }
     public static void rechungausgeben(String artikel, int anzahl, double nettogesamtpreis, double bruttogesamtpreis, double mwst){
         System.out.println("\tRechnung");
