@@ -21,8 +21,6 @@ public class Weltreise {
             Daenemark(a);
         }
         System.out.print("Geh nach Hause!!");
-
-
         
     }
     public static Double Ausgabe(Double geld, double preis){
