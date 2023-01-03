@@ -12,12 +12,10 @@ public static void main(String[] args) {
             
         if(x%i==0 && i!=x&&i!=1 || x == 1){
             System.out.println("keine Primzahl... Teilbar durch: " + i);
-            tastatur.close();
             break;
             }
         else if(i/x==1){
             System.out.println("ist ne Primzahl");
-            tastatur.close();
             break;
                 
             }

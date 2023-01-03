@@ -21,7 +21,7 @@ public class DummyProgram {
     }
     System.out.println("Calculating the sum of the first 100 positive integers...");
     try {
-      Thread.sleep(2000);
+      Thread.sleep(4000);
     } catch (InterruptedException e) {
       e.printStackTrace();
     }
@@ -29,14 +29,14 @@ public class DummyProgram {
 
     // Generate and print 10 random numbers
     Random random = new Random();
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 20; i++) {
       System.out.println("Generating a random number...");
       try {
-        Thread.sleep(500);
+        Thread.sleep(1000);
       } catch (InterruptedException e) {
         e.printStackTrace();
       }
-      int randomInt = random.nextInt(100);
+      int randomInt = random.nextInt(10000);
       System.out.println(randomInt);
       if (randomInt % 2 == 0) {
         System.out.println(randomInt + " is even.");
@@ -44,9 +44,9 @@ public class DummyProgram {
         System.out.println(randomInt + " is odd.");
       }
     }
-    System.out.println("\nAll done!");
+    
 
-    // Calculate the factorial of 10
+    // Calculate the factorial of 42
     long factorial = 1;
     for (int i = 1; i <= 42; i++) {
       factorial *= i;
@@ -58,6 +58,6 @@ public class DummyProgram {
       e.printStackTrace();
     }
     System.out.println("The factorial of 42 is: " + factorial);
-
+    System.out.println("\nAll done!");
   }
 }
