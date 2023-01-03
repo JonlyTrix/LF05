@@ -44,7 +44,7 @@ public class DummyProgram {
         System.out.println(randomInt + " is odd.");
       }
     }
-       
+
 
     // Calculate the factorial of 42
     long factorial = 1;
