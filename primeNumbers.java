@@ -1,22 +1,19 @@
-import java.util.Scanner;
+
 
 public class primeNumbers {
-public static void main(String[] args) {
-   
+public static void main(String[] args) throws InterruptedException{
+    int x = 1;
     while(true){
-    int x;
-    Scanner tastatur = new Scanner(System.in);
-    System.out.print("Zahl:");
-    x = tastatur.nextInt();
+    x = x+1;
     for(int i=1; i<=x; i=i+1) {
             
         if(x%i==0 && i!=x&&i!=1 || x == 1){
-            System.out.println("keine Primzahl... Teilbar durch: " + i);
             break;
+
             }
         else if(i/x==1){
-            System.out.println("ist ne Primzahl");
-            break;
+            System.out.println(x+ " ist ne Primzahl");
+            Thread.sleep(100);
                 
             }
         }
